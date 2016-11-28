@@ -5,9 +5,116 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Nov 2016 12:57:42 +0800</pubDate>
-    <lastBuildDate>Mon, 28 Nov 2016 12:57:42 +0800</lastBuildDate>
+    <pubDate>Mon, 28 Nov 2016 15:54:35 +0800</pubDate>
+    <lastBuildDate>Mon, 28 Nov 2016 15:54:35 +0800</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Jekyll+Github Pages搭建静态博客</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#关于搭建博客&quot; id=&quot;markdown-toc-关于搭建博客&quot;&gt;关于搭建博客&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#搭建过程&quot; id=&quot;markdown-toc-搭建过程&quot;&gt;搭建过程&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#开启github-pages&quot; id=&quot;markdown-toc-开启github-pages&quot;&gt;开启github pages&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#部署jekyll&quot; id=&quot;markdown-toc-部署jekyll&quot;&gt;部署jekyll&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#安装ruby和rubygems&quot; id=&quot;markdown-toc-安装ruby和rubygems&quot;&gt;安装Ruby和RubyGems&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+由于国内各种博客平台的种种限制和不人性化，一直以来都想搭建一个属于自己的博客，好不容易最近工作落定，距离上班还有一定的时间，才重新把这个计划搬上日程。也是通过博主&lt;a href=&quot;http://kresnik.wang/&quot;&gt;http://kresnik.wang/&lt;/a&gt;的教程学会基本搭建。
+
+&lt;h4 id=&quot;关于搭建博客&quot;&gt;关于搭建博客&lt;/h4&gt;
+关于利用github pages搭建博客道不道德的争论一直都存在，但私以为：“Techiques don’t identify themself, Users do.”
+
+&lt;h2 id=&quot;搭建过程&quot;&gt;搭建过程&lt;/h2&gt;
+
+&lt;h3 id=&quot;开启github-pages&quot;&gt;开启github pages&lt;/h3&gt;
+
+首先要对Github pages有一定了解，这是github推出的一项静态页面技术，提供用户300MB的在线空间，官方网站&lt;a href=&quot;https://pages.github.com/&quot;&gt;https://pages.github.com/&lt;/a&gt;对如何建立自己的github pages已经说得比较明白了，我用的是MAC OS系统，比较方便用terminal进行项目的修改。
+
+&lt;h3 id=&quot;部署jekyll&quot;&gt;部署jekyll&lt;/h3&gt;
+
+Jekyll的原理很简单，这是一个已经合成好的静态html网站结构。你用这个结构在你github pages的repo里面粘帖好所有文件。再把更新完的本地repo推送到GitHub的master branch里面，你的网站就更新建设完毕了。
+
+&lt;h4 id=&quot;安装ruby和rubygems&quot;&gt;安装Ruby和RubyGems&lt;/h4&gt;
+
+首先你需要ruby来使用本地jekyll。Mac和Linux可以用Terminal配合yum或者brew这样的包管理器很方便的安装ruby。安装完之后可以在terminal里输入&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby --version&lt;/code&gt;来查看是否安装成功。
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;➜  ~ ruby --version
+ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-darwin16]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+安装完ruby，之后就是要安装&lt;a href=&quot;https://rubygems.org/pages/download&quot;&gt;RubyGems&lt;/a&gt;，gem是一个ruby的包管理系统，可以用gem很方便的在本地安装ruby应用。
+
+安装方法
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//在RubyGems官网上下载压缩包，解压到你的本地任意位置
+//在Terminal中
+cd yourpath to RubyGems //你解压的位置
+ruby setup.rb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+有了gem之后安装jekyll就很容易了，直接在Terminal里面输入以下代码：
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;em&gt;如果不成功有可能是你没有添加gem sources。&lt;/em&gt;
+
+如果你喜欢自己鼓捣一些前端技术，你可以自己创建jekyll的框架:
+
+├── _config.yml
+
+├── _drafts
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|   ├── begin-with-the-crazy-ideas.textile
+|   └── on-simplicity-in-technology.markdown
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+├── _includes
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|   ├── footer.html
+|   └── header.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+├── _layouts
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|   ├── default.html
+|   └── post.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+├── _posts
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+|   └── 2009-04-26-barcamp-boston-4-roundup.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+├── _site
+
+└── index.html
+你可以一个个依次建立起来，然后在自己编写一个你想要的博客。
+
+或者你可以去&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;jekyll themes&lt;/a&gt;寻找自己喜欢的模板，手残党福利。
+
+下载完了模板，可以吧里面的内容解压到你自己的网站目录底下。这时候你可以测试一下：
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd you website path //cd到你的网站目录下
+$ jekyll serve
+//一个开发服务器将会运行在 http://localhost:4000/
+//你就能在本地服务器看到你用模板搭建的网站了
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+所有的文章直接放在_posts文件夹下面，格式就是markdown文件，默认的格式是.md和.markdown文件。到此为止可以开始尽情的写博客了，用GitHub软件同步到你的repository里面，网站上面就可以进行正常的显示了。
+
+</description>
+        <pubDate>Mon, 28 Nov 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/11/28/Stuff-Create-Blog-Using-Jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/11/28/Stuff-Create-Blog-Using-Jekyll/</guid>
+        
+        <category>Jekyll</category>
+        
+        <category>RubyGems</category>
+        
+        <category>Github</category>
+        
+        
+        <category>Stuff</category>
+        
+      </item>
     
       <item>
         <title>回国找工心得——校园招聘</title>
@@ -40,7 +147,7 @@
 
 &lt;h3 id=&quot;第四步笔试面试&quot;&gt;第四步：笔试面试&lt;/h3&gt;
 
-一般来说技术类专业都是要通过一个笔试才有机会去面试的。笔试没什么好说的，上网找笔经多看看应该问题不大，都是比较基础的知识和不难的编程题（但是还是不妨碍我挂了好几个笔试T.T）。如果笔试之后收到了面试通知，那么恭喜你在校招这个独木桥上跨出了第一步。面试之前，对自己简历上所有内容进行充分的准备，因为你不知道面试官会对你哪段经历感兴趣。面试的时候一定要想办法让面试官对你的经历感兴趣，我想我的海外经历在这一点上发挥了很大的用处，大部分面试官对这段经历非常感兴趣，问的问题也会和你的经历有关。临场发挥也有一点诀窍，那就是对于不懂的问题尽量往你的知识库上靠，万一说了个类似的把话题转回来了呢。尽量不要紧张，语速平缓一点，一定一定要显得自信而谦虚。面试一般来说是1-2轮技术面试加上一轮HR面试。
+一般来说技术类专业都是要通过一个笔试才有机会去面试的。笔试没什么好说的，上网找笔经多看看应该问题不大，都是比较基础的知识和不难的编程题（但是还是不妨碍我挂了好几个笔试T.T）。如果笔试之后收到了面试通知，那么恭喜你在校招这个独木桥上跨出了第一步。面试之前，对自己简历上所有内容进行充分的准备，面试的时候一定要想办法让面试官对你的经历感兴趣，我想我的海外经历在这一点上发挥了很大的用处，大部分面试官对这段经历非常感兴趣，问的问题也会和你的经历有关。临场发挥也有一点诀窍，那就是对于不懂的问题尽量往你的知识库上靠，万一说了个类似的把话题转回来了呢。尽量不要紧张，语速平缓一点，一定一定要显得自信而谦虚。面试一般来说是1-2轮技术面试加上一轮HR面试。
 
 &lt;h3 id=&quot;第五步谈薪&quot;&gt;第五步：谈薪&lt;/h3&gt;
 

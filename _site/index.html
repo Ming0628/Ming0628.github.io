@@ -101,6 +101,158 @@
             
               <li>
                 <h2>
+                  <a class="post-link" href="/2016/11/28/Stuff-Create-Blog-Using-Jekyll/">Jekyll+Github Pages搭建静态博客</a>
+                </h2>
+                <div class="label">
+                    <div class="label-card">
+                        <i class="fa fa-calendar"></i>2016-11-28
+                    </div>
+                    <div class="label-card">
+                        <i class="fa fa-user"></i>Tyrael_Ming
+                        
+                    </div>
+                    <div class="label-card">
+                        
+                    </div>
+
+                    <div class="label-card">
+                    
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#Stuff" title="Category: Stuff" rel="category">Stuff</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+                    </div>
+
+                    <div class="label-card">
+                    
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <a href="/tag/#Jekyll" title="Tag: Jekyll" rel="tag">Jekyll</a>&nbsp;
+    
+        <a href="/tag/#RubyGems" title="Tag: RubyGems" rel="tag">RubyGems</a>&nbsp;
+    
+        <a href="/tag/#Github" title="Tag: Github" rel="tag">Github</a>
+    
+  
+
+</span>
+
+                    </div>
+                </div>
+                <div class="excerpt">
+                    <ul id="markdown-toc">
+  <li><a href="#关于搭建博客" id="markdown-toc-关于搭建博客">关于搭建博客</a></li>
+  <li><a href="#搭建过程" id="markdown-toc-搭建过程">搭建过程</a>    <ul>
+      <li><a href="#开启github-pages" id="markdown-toc-开启github-pages">开启github pages</a></li>
+      <li><a href="#部署jekyll" id="markdown-toc-部署jekyll">部署jekyll</a>        <ul>
+          <li><a href="#安装ruby和rubygems" id="markdown-toc-安装ruby和rubygems">安装Ruby和RubyGems</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>由于国内各种博客平台的种种限制和不人性化，一直以来都想搭建一个属于自己的博客，好不容易最近工作落定，距离上班还有一定的时间，才重新把这个计划搬上日程。也是通过博主<a href="http://kresnik.wang/">http://kresnik.wang/</a>的教程学会基本搭建。</p>
+
+<h4 id="关于搭建博客">关于搭建博客</h4>
+<p>关于利用github pages搭建博客道不道德的争论一直都存在，但私以为：“Techiques don’t identify themself, Users do.”</p>
+
+<h2 id="搭建过程">搭建过程</h2>
+
+<h3 id="开启github-pages">开启github pages</h3>
+
+<p>首先要对Github pages有一定了解，这是github推出的一项静态页面技术，提供用户300MB的在线空间，官方网站<a href="https://pages.github.com/">https://pages.github.com/</a>对如何建立自己的github pages已经说得比较明白了，我用的是MAC OS系统，比较方便用terminal进行项目的修改。</p>
+
+<h3 id="部署jekyll">部署jekyll</h3>
+
+<p>Jekyll的原理很简单，这是一个已经合成好的静态html网站结构。你用这个结构在你github pages的repo里面粘帖好所有文件。再把更新完的本地repo推送到GitHub的master branch里面，你的网站就更新建设完毕了。</p>
+
+<h4 id="安装ruby和rubygems">安装Ruby和RubyGems</h4>
+
+<p>首先你需要ruby来使用本地jekyll。Mac和Linux可以用Terminal配合yum或者brew这样的包管理器很方便的安装ruby。安装完之后可以在terminal里输入<code class="highlighter-rouge">ruby --version</code>来查看是否安装成功。</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>➜  ~ ruby --version
+ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-darwin16]
+</code></pre>
+</div>
+<p>安装完ruby，之后就是要安装<a href="https://rubygems.org/pages/download">RubyGems</a>，gem是一个ruby的包管理系统，可以用gem很方便的在本地安装ruby应用。</p>
+
+<p>安装方法</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>//在RubyGems官网上下载压缩包，解压到你的本地任意位置
+//在Terminal中
+cd yourpath to RubyGems //你解压的位置
+ruby setup.rb
+</code></pre>
+</div>
+<p>有了gem之后安装jekyll就很容易了，直接在Terminal里面输入以下代码：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install jekyll
+</code></pre>
+</div>
+<p><em>如果不成功有可能是你没有添加gem sources。</em></p>
+
+<p>如果你喜欢自己鼓捣一些前端技术，你可以自己创建jekyll的框架:</p>
+
+<p>├── _config.yml</p>
+
+<p>├── _drafts</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>|   ├── begin-with-the-crazy-ideas.textile
+|   └── on-simplicity-in-technology.markdown
+</code></pre>
+</div>
+<p>├── _includes</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>|   ├── footer.html
+|   └── header.html
+</code></pre>
+</div>
+<p>├── _layouts</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>|   ├── default.html
+|   └── post.html
+</code></pre>
+</div>
+<p>├── _posts</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+|   └── 2009-04-26-barcamp-boston-4-roundup.md
+</code></pre>
+</div>
+<p>├── _site</p>
+
+<p>└── index.html
+你可以一个个依次建立起来，然后在自己编写一个你想要的博客。</p>
+
+<p>或者你可以去<a href="http://jekyllthemes.org/">jekyll themes</a>寻找自己喜欢的模板，手残党福利。</p>
+
+<p>下载完了模板，可以吧里面的内容解压到你自己的网站目录底下。这时候你可以测试一下：</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>$ cd you website path //cd到你的网站目录下
+$ jekyll serve
+//一个开发服务器将会运行在 http://localhost:4000/
+//你就能在本地服务器看到你用模板搭建的网站了
+</code></pre>
+</div>
+<p>所有的文章直接放在_posts文件夹下面，格式就是markdown文件，默认的格式是.md和.markdown文件。到此为止可以开始尽情的写博客了，用GitHub软件同步到你的repository里面，网站上面就可以进行正常的显示了。</p>
+
+
+                </div>
+                <div class="read-all">
+                    <a  href="/2016/11/28/Stuff-Create-Blog-Using-Jekyll/"><i class="fa fa-newspaper-o"></i>Read All</a>
+                </div>
+                <hr>
+              </li>
+            
+              <li>
+                <h2>
                   <a class="post-link" href="/2016/11/28/Stuff-Campus-recruiting/">回国找工心得——校园招聘</a>
                 </h2>
                 <div class="label">
@@ -179,7 +331,7 @@
 
 <h3 id="第四步笔试面试">第四步：笔试面试</h3>
 
-<p>一般来说技术类专业都是要通过一个笔试才有机会去面试的。笔试没什么好说的，上网找笔经多看看应该问题不大，都是比较基础的知识和不难的编程题（但是还是不妨碍我挂了好几个笔试T.T）。如果笔试之后收到了面试通知，那么恭喜你在校招这个独木桥上跨出了第一步。面试之前，对自己简历上所有内容进行充分的准备，因为你不知道面试官会对你哪段经历感兴趣。面试的时候一定要想办法让面试官对你的经历感兴趣，我想我的海外经历在这一点上发挥了很大的用处，大部分面试官对这段经历非常感兴趣，问的问题也会和你的经历有关。临场发挥也有一点诀窍，那就是对于不懂的问题尽量往你的知识库上靠，万一说了个类似的把话题转回来了呢。尽量不要紧张，语速平缓一点，一定一定要显得自信而谦虚。面试一般来说是1-2轮技术面试加上一轮HR面试。</p>
+<p>一般来说技术类专业都是要通过一个笔试才有机会去面试的。笔试没什么好说的，上网找笔经多看看应该问题不大，都是比较基础的知识和不难的编程题（但是还是不妨碍我挂了好几个笔试T.T）。如果笔试之后收到了面试通知，那么恭喜你在校招这个独木桥上跨出了第一步。面试之前，对自己简历上所有内容进行充分的准备，面试的时候一定要想办法让面试官对你的经历感兴趣，我想我的海外经历在这一点上发挥了很大的用处，大部分面试官对这段经历非常感兴趣，问的问题也会和你的经历有关。临场发挥也有一点诀窍，那就是对于不懂的问题尽量往你的知识库上靠，万一说了个类似的把话题转回来了呢。尽量不要紧张，语速平缓一点，一定一定要显得自信而谦虚。面试一般来说是1-2轮技术面试加上一轮HR面试。</p>
 
 <h3 id="第五步谈薪">第五步：谈薪</h3>
 
@@ -221,6 +373,8 @@
                 </div>
                 <ul class="content-ul" recent>
                     
+                        <li><a href="/2016/11/28/Stuff-Create-Blog-Using-Jekyll/">Jekyll+Github Pages搭建静态博客</a></li>
+                    
                         <li><a href="/2016/11/28/Stuff-Campus-recruiting/">回国找工心得——校园招聘</a></li>
                     
                 </ul>
@@ -239,7 +393,7 @@
                             <span class="name">
                                 Stuff
                             </span>
-                            <span class="badge">1</span>
+                            <span class="badge">2</span>
                         </a>
                     </li>
                     
@@ -266,6 +420,27 @@
                       
                       
                       <a href="/tag/#job" style="font-size: 9pt; color: #999;">job</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#Jekyll" style="font-size: 9pt; color: #999;">Jekyll</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#RubyGems" style="font-size: 9pt; color: #999;">RubyGems</a>
+                    
+                      
+                      
+                      
+                      
+                      
+                      <a href="/tag/#Github" style="font-size: 9pt; color: #999;">Github</a>
                     
                 </div>
             </div>
