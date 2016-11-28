@@ -29,7 +29,7 @@ Jekyll的原理很简单，这是一个已经合成好的静态html网站结构�
 首先你需要ruby来使用本地jekyll。Mac和Linux可以用Terminal配合yum或者brew这样的包管理器很方便的安装ruby。安装完之后可以在terminal里输入`ruby --version`来查看是否安装成功。
 
 ```
-➜  ~ ruby --version
+ruby --version
 ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-darwin16]
 ```
 
@@ -52,7 +52,7 @@ $ gem install jekyll
 
 *如果不成功有可能是你没有添加 gem sources。*
 
-如果你喜欢自己鼓捣一些前端技术，你可以自己创建jekyll的框架:
+如果你喜欢自己鼓捣一些前端技术，你可以自己创建jekyll的框架，下面就是jekyll框架所需的基本文件:
 
 ├── _config.yml   
 
@@ -101,5 +101,7 @@ $ jekyll serve
 //你就能在本地服务器看到你用模板搭建的网站了
 ```
 
-所有的文章直接放在_posts文件夹下面，格式就是markdown文件，默认的格式是.md和.markdown文件。到此为止可以开始尽情的写博客了，用GitHub软件同步到你的repository里面，网站上面就可以进行正常的显示了。
+所有的文章直接放在_posts文件夹下面，通过markdown格式编写，默认的文件格式是.md和.markdown文件。
+
+到此为止可以开始尽情的写博客了，用GitHub软件同步到你的repository里面，网站上面就可以进行正常的显示了。
 
