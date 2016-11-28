@@ -87,6 +87,7 @@ $ gem install jekyll
 ├── _site
 
 └── index.html
+
 你可以一个个依次建立起来，然后在自己编写一个你想要的博客。
 
 或者你可以去[jekyll themes](http://jekyllthemes.org/)寻找自己喜欢的模板，手残党福利。
