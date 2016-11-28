@@ -183,24 +183,21 @@
 
 <h4 id="安装ruby和rubygems">安装Ruby和RubyGems</h4>
 
-<p>首先你需要ruby来使用本地jekyll。Mac和Linux可以用Terminal配合yum或者brew这样的包管理器很方便的安装ruby。安装完之后可以在terminal里输入<code class="highlighter-rouge">ruby --version</code>来查看是否安装成功。</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>➜  ~ ruby --version
+<p>首先你需要ruby来使用本地jekyll。Mac和Linux可以用Terminal配合yum或者brew这样的包管理器很方便的安装ruby。安装完之后可以在terminal里输入<code>ruby --version</code>来查看是否安装成功。</p>
+<pre><code>➜  ~ ruby --version
 ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-darwin16]
 </code></pre>
-</div>
 <p>安装完ruby，之后就是要安装<a href="https://rubygems.org/pages/download">RubyGems</a>，gem是一个ruby的包管理系统，可以用gem很方便的在本地安装ruby应用。</p>
 
 <p>安装方法</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>//在RubyGems官网上下载压缩包，解压到你的本地任意位置
+<pre><code>//在RubyGems官网上下载压缩包，解压到你的本地任意位置
 //在Terminal中
 cd yourpath to RubyGems //你解压的位置
 ruby setup.rb
 </code></pre>
-</div>
 <p>有了gem之后安装jekyll就很容易了，直接在Terminal里面输入以下代码：</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install jekyll
+<pre><code>$ gem install jekyll
 </code></pre>
-</div>
 <p><em>如果不成功有可能是你没有添加gem sources。</em></p>
 
 <p>如果你喜欢自己鼓捣一些前端技术，你可以自己创建jekyll的框架:</p>
@@ -208,25 +205,21 @@ ruby setup.rb
 <p>├── _config.yml</p>
 
 <p>├── _drafts</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>|   ├── begin-with-the-crazy-ideas.textile
+<pre><code>|   ├── begin-with-the-crazy-ideas.textile
 |   └── on-simplicity-in-technology.markdown
 </code></pre>
-</div>
 <p>├── _includes</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>|   ├── footer.html
+<pre><code>|   ├── footer.html
 |   └── header.html
 </code></pre>
-</div>
 <p>├── _layouts</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>|   ├── default.html
+<pre><code>|   ├── default.html
 |   └── post.html
 </code></pre>
-</div>
 <p>├── _posts</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+<pre><code>|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
 |   └── 2009-04-26-barcamp-boston-4-roundup.md
 </code></pre>
-</div>
 <p>├── _site</p>
 
 <p>└── index.html
@@ -235,12 +228,11 @@ ruby setup.rb
 <p>或者你可以去<a href="http://jekyllthemes.org/">jekyll themes</a>寻找自己喜欢的模板，手残党福利。</p>
 
 <p>下载完了模板，可以吧里面的内容解压到你自己的网站目录底下。这时候你可以测试一下：</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>$ cd you website path //cd到你的网站目录下
+<pre><code>$ cd you website path //cd到你的网站目录下
 $ jekyll serve
 //一个开发服务器将会运行在 http://localhost:4000/
 //你就能在本地服务器看到你用模板搭建的网站了
 </code></pre>
-</div>
 <p>所有的文章直接放在_posts文件夹下面，格式就是markdown文件，默认的格式是.md和.markdown文件。到此为止可以开始尽情的写博客了，用GitHub软件同步到你的repository里面，网站上面就可以进行正常的显示了。</p>
 
 

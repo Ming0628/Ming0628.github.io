@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Nov 2016 15:54:35 +0800</pubDate>
-    <lastBuildDate>Mon, 28 Nov 2016 15:54:35 +0800</lastBuildDate>
+    <pubDate>Mon, 28 Nov 2016 15:59:18 +0800</pubDate>
+    <lastBuildDate>Mon, 28 Nov 2016 15:59:18 +0800</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -40,24 +40,21 @@ Jekyll的原理很简单，这是一个已经合成好的静态html网站结构�
 
 &lt;h4 id=&quot;安装ruby和rubygems&quot;&gt;安装Ruby和RubyGems&lt;/h4&gt;
 
-首先你需要ruby来使用本地jekyll。Mac和Linux可以用Terminal配合yum或者brew这样的包管理器很方便的安装ruby。安装完之后可以在terminal里输入&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby --version&lt;/code&gt;来查看是否安装成功。
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;➜  ~ ruby --version
+首先你需要ruby来使用本地jekyll。Mac和Linux可以用Terminal配合yum或者brew这样的包管理器很方便的安装ruby。安装完之后可以在terminal里输入&lt;code&gt;ruby --version&lt;/code&gt;来查看是否安装成功。
+&lt;pre&gt;&lt;code&gt;➜  ~ ruby --version
 ruby 2.3.3p222 (2016-11-21 revision 56859) [x86_64-darwin16]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 安装完ruby，之后就是要安装&lt;a href=&quot;https://rubygems.org/pages/download&quot;&gt;RubyGems&lt;/a&gt;，gem是一个ruby的包管理系统，可以用gem很方便的在本地安装ruby应用。
 
 安装方法
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//在RubyGems官网上下载压缩包，解压到你的本地任意位置
+&lt;pre&gt;&lt;code&gt;//在RubyGems官网上下载压缩包，解压到你的本地任意位置
 //在Terminal中
 cd yourpath to RubyGems //你解压的位置
 ruby setup.rb
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 有了gem之后安装jekyll就很容易了，直接在Terminal里面输入以下代码：
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install jekyll
+&lt;pre&gt;&lt;code&gt;$ gem install jekyll
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;em&gt;如果不成功有可能是你没有添加gem sources。&lt;/em&gt;
 
 如果你喜欢自己鼓捣一些前端技术，你可以自己创建jekyll的框架:
@@ -65,25 +62,21 @@ ruby setup.rb
 ├── _config.yml
 
 ├── _drafts
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|   ├── begin-with-the-crazy-ideas.textile
+&lt;pre&gt;&lt;code&gt;|   ├── begin-with-the-crazy-ideas.textile
 |   └── on-simplicity-in-technology.markdown
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 ├── _includes
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|   ├── footer.html
+&lt;pre&gt;&lt;code&gt;|   ├── footer.html
 |   └── header.html
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 ├── _layouts
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|   ├── default.html
+&lt;pre&gt;&lt;code&gt;|   ├── default.html
 |   └── post.html
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 ├── _posts
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
+&lt;pre&gt;&lt;code&gt;|   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
 |   └── 2009-04-26-barcamp-boston-4-roundup.md
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 ├── _site
 
 └── index.html
@@ -92,12 +85,11 @@ ruby setup.rb
 或者你可以去&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;jekyll themes&lt;/a&gt;寻找自己喜欢的模板，手残党福利。
 
 下载完了模板，可以吧里面的内容解压到你自己的网站目录底下。这时候你可以测试一下：
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd you website path //cd到你的网站目录下
+&lt;pre&gt;&lt;code&gt;$ cd you website path //cd到你的网站目录下
 $ jekyll serve
 //一个开发服务器将会运行在 http://localhost:4000/
 //你就能在本地服务器看到你用模板搭建的网站了
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 所有的文章直接放在_posts文件夹下面，格式就是markdown文件，默认的格式是.md和.markdown文件。到此为止可以开始尽情的写博客了，用GitHub软件同步到你的repository里面，网站上面就可以进行正常的显示了。
 
 </description>
