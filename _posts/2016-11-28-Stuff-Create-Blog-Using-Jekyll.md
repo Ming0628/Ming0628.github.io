@@ -3,7 +3,7 @@ layout:	post
 title:	"Jekyll+Github Pages搭建静态博客"
 categories: Stuff
 tags:	Jekyll RubyGems Github
-author:	Tyrael_Ming
+author:	Ming
 ---
 
 * content

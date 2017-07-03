@@ -3,7 +3,7 @@ layout: post
 title:	"美国的牛肉文化"
 categories: Stuff
 tags: food
-author: Tyrael_Ming
+author: Ming
 ---
 
 * content

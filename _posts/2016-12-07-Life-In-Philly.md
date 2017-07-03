@@ -3,7 +3,7 @@ layout:	post
 title:	"费城生活"
 categories: Stuff
 tags: Philadelphia Learning
-author: Tyrael_Ming
+author: Ming
 ---
 
 * content

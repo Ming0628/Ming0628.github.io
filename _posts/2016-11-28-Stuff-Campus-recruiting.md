@@ -3,7 +3,7 @@ layout: post
 title:	"回国找工心得——校园招聘"
 categories: Stuff
 tags: job
-author: Tyrael_Ming
+author: Ming
 ---
 
 * content

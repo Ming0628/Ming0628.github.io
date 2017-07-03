@@ -3,7 +3,7 @@ layout: post
 title:	"一些事情和一些思考"
 categories: Stuff
 tags: Github job Learning
-author: Tyrael_Ming
+author: Ming
 ---
 
 * content
