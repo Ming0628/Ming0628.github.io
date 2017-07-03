@@ -2,7 +2,7 @@
 layout: post
 title:	"我的工作习惯（持续更新）"
 categories: Work
-tags: job work habbitB 
+tags: job work habbit 
 author: Ming
 ---
 
